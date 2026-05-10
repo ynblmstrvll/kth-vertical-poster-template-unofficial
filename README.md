@@ -11,7 +11,7 @@ An unofficial portrait academic poster template inspired by the KTH visual ident
 
 ## Preview
 
-![preview](preview.png)
+![preview](KTH_Vertical_Poster_Template.png)
 
 ## Usage
 
