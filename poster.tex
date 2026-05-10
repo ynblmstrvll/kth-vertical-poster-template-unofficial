@@ -1,0 +1,428 @@
+% =========================================================
+% Unofficial KTH Vertical Poster Template
+% 700 mm × 1000 mm Portrait
+% Based on the Gemini beamerposter theme
+% by Anish Athalye.
+%
+% Modified and extended by Jeongin Yoon Blomstervall 
+% Division of Digital Learning 
+% Department of Technology in Learning 
+% May 2026 
+% =========================================================
+
+\documentclass[final]{beamer}
+
+% =========================================================
+% Poster size
+% =========================================================
+
+\usepackage[
+  size=custom,
+  width=70,
+  height=100,
+  scale=1.0
+]{beamerposter}
+
+% =========================================================
+% Packages
+% =========================================================
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setsansfont[
+  Path = font/,
+  UprightFont = *-Regular,
+  BoldFont = *-SemiBold
+]{Figtree}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pgfplotsset{compat=1.17}
+
+% =========================================================
+% Theme
+% =========================================================
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+% =========================================================
+% KTH Colors
+% =========================================================
+
+\definecolor{kthblue}{RGB}{25,84,166}
+\definecolor{kthlight}{RGB}{245,245,245}
+\definecolor{kthgray}{RGB}{80,80,80}
+
+% =========================================================
+% Beamer Colors
+% =========================================================
+
+\setbeamercolor{background canvas}{bg=white}
+
+\setbeamercolor{headline}{
+  bg=kthblue,
+  fg=white
+}
+
+\setbeamercolor{title in headline}{
+  fg=white
+}
+
+\setbeamercolor{author in headline}{
+  fg=white
+}
+
+\setbeamercolor{institute in headline}{
+  fg=white
+}
+
+\setbeamercolor{block title}{
+  bg=kthblue,
+  fg=white
+}
+
+\setbeamercolor{block body}{
+  bg=white,
+  fg=black
+}
+
+\setbeamercolor{alertblock title}{
+  bg=kthblue,
+  fg=white
+}
+
+\setbeamercolor{alertblock body}{
+  bg=kthlight,
+  fg=black
+}
+
+\setbeamercolor{footline}{
+  bg=kthblue,
+  fg=white
+}
+
+% =========================================================
+% Typography
+% =========================================================
+
+\setbeamerfont{title}{
+  size=\fontsize{54}{60}\selectfont
+}
+
+\setbeamerfont{block title}{
+  size=\fontsize{24}{28}\selectfont
+}
+
+\setbeamerfont{author}{
+  size=\fontsize{28}{32}\selectfont
+}
+
+\setbeamerfont{institute}{
+  size=\fontsize{22}{26}\selectfont
+}
+
+
+\setbeamerfont{block body}{
+  size=\fontsize{18}{22}\selectfont
+}
+
+% =========================================================
+% Column Layout
+% =========================================================
+
+\newlength{\sepwidth}
+\newlength{\colwidth}
+
+\setlength{\sepwidth}{0.04\paperwidth}
+\setlength{\colwidth}{0.44\paperwidth}
+
+\newcommand{\separatorcolumn}{
+  \begin{column}{\sepwidth}
+  \end{column}
+}
+
+% =========================================================
+% Title
+% =========================================================
+
+\title{Your Poster Title Goes Here}
+
+\author{
+  First Author\inst{1} \and
+  Second Author\inst{1} \and
+  Third Author\inst{2}
+}
+
+\institute[shortinst]{
+  \inst{1} KTH Royal Institute of Technology \\
+  \inst{2} Collaborating Institute
+}
+
+% =========================================================
+% Logo
+% =========================================================
+
+\titlegraphic{
+\includegraphics[height=7cm]
+{logos/KTH_Royal_Institute_of_Technology_logo.svg.png}
+}
+
+% =========================================================
+% Header
+% =========================================================
+
+\setbeamertemplate{headline}
+{
+\begin{beamercolorbox}[wd=\paperwidth]{headline}
+
+\vspace{2cm}
+
+\begin{columns}
+
+\begin{column}{0.72\paperwidth}
+
+\hspace{2cm}
+
+{\usebeamerfont{title}\color{white}\inserttitle\par}
+
+\vspace{1cm}
+
+{\usebeamerfont{author}\color{white}\insertauthor\par}
+
+\vspace{0.5cm}
+
+{\usebeamerfont{institute}\color{white}\insertinstitute\par}
+
+\end{column}
+
+\begin{column}{0.1\paperwidth}
+
+\centering
+
+\hfill
+
+\inserttitlegraphic
+
+\end{column}
+
+\end{columns}
+
+\vspace{1.5cm}
+
+\end{beamercolorbox}
+}
+
+% =========================================================
+% Footer
+% =========================================================
+
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[wd=\paperwidth,ht=4cm,dp=1cm]{footline}
+
+\vspace{1.2cm}
+
+\begin{columns}
+
+\begin{column}{0.33\paperwidth}
+\hspace{1.5cm}
+{\fontsize{18}{22}\selectfont www.kth.se}
+\end{column}
+
+\begin{column}{0.33\paperwidth}
+\centering
+{\fontsize{18}{22}\selectfont Conference May 2026}
+\end{column}
+
+\begin{column}{0.33\paperwidth}
+\raggedleft
+{\fontsize{18}{22}\selectfont jeongin@kth.se}
+\hspace{1.5cm}
+\end{column}
+
+\end{columns}
+
+\end{beamercolorbox}
+}
+
+% =========================================================
+% Document
+% =========================================================
+
+\begin{document}
+
+\begin{frame}[t]
+
+\vspace{1cm}
+
+\begin{columns}[t]
+
+\separatorcolumn
+
+% =========================================================
+% LEFT COLUMN
+% =========================================================
+
+\begin{column}{\colwidth}
+
+% ---------------------------------------------------------
+\begin{block}{Introduction}
+
+This is a KTH-style vertical academic poster template.
+
+\begin{itemize}
+  \item Research motivation
+  \item Objectives
+  \item Background
+  \item Research questions
+\end{itemize}
+
+\end{block}
+
+% ---------------------------------------------------------
+\begin{block}{Methodology}
+
+Describe your methodology here.
+
+\begin{figure}
+\centering
+
+\begin{tikzpicture}[scale=3]
+
+\draw[step=0.25cm,color=gray!30]
+(-1,-1) grid (1,1);
+
+\draw[very thick,kthblue]
+(-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
+
+\end{tikzpicture}
+
+\caption{Example methodology diagram.}
+
+\end{figure}
+
+\end{block}
+
+% ---------------------------------------------------------
+\begin{alertblock}{Important Result}
+
+Highlight your most important finding.
+
+\[
+E = mc^2
+\]
+
+\end{alertblock}
+
+% ---------------------------------------------------------
+\begin{block}{Experimental Setup}
+
+\begin{itemize}
+  \item Dataset description
+  \item Hardware configuration
+  \item Evaluation metrics
+  \item Training procedure
+\end{itemize}
+
+\end{block}
+
+\end{column}
+
+\separatorcolumn
+
+% =========================================================
+% RIGHT COLUMN
+% =========================================================
+
+\begin{column}{\colwidth}
+
+% ---------------------------------------------------------
+\begin{block}{Results}
+
+\begin{figure}
+
+\centering
+
+\begin{tikzpicture}
+
+\begin{axis}[
+width=0.9\linewidth,
+height=0.45\linewidth,
+xlabel={Epoch},
+ylabel={Accuracy},
+grid=major
+]
+
+\addplot coordinates {
+(1,0.60)
+(2,0.68)
+(3,0.75)
+(4,0.82)
+(5,0.88)
+};
+
+\end{axis}
+
+\end{tikzpicture}
+
+\caption{Example performance curve.}
+
+\end{figure}
+
+\end{block}
+
+% ---------------------------------------------------------
+\begin{block}{Discussion}
+
+\begin{itemize}
+  \item Interpretation of results
+  \item Limitations
+  \item Future work
+  \item Comparison with prior work
+\end{itemize}
+
+\end{block}
+
+% ---------------------------------------------------------
+\begin{block}{Conclusion}
+
+\begin{enumerate}
+  \item Main contribution
+  \item Scientific impact
+  \item Practical applications
+\end{enumerate}
+
+\end{block}
+
+% ---------------------------------------------------------
+\begin{block}{References}
+
+{\footnotesize
+\bibliographystyle{plain}
+\bibliography{poster}
+}
+
+\end{block}
+
+% ---------------------------------------------------------
+\begin{block}{Acknowledgements}
+
+This work was supported by KTH Royal Institute of Technology.
+
+\end{block}
+
+\end{column}
+
+\separatorcolumn
+
+\end{columns}
+
+\end{frame}
+
+\end{document}
