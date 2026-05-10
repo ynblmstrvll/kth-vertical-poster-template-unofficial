@@ -5,6 +5,10 @@ An unofficial portrait academic poster template inspired by the KTH visual ident
 - LaTeX Beamerposter
 - Figtree typography
 
+## Overleaf
+
+[Open in Overleaf](link to be added soon.)
+
 ## Preview
 
 ![preview](preview.png)
