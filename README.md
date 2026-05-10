@@ -1,13 +1,23 @@
 # Unofficial KTH Vertical Poster Template
-A portrait academic poster template for LaTeX beamerposter.
-- 700 × 1000 mm portrait
-- KTH-inspired visual identity
+
+An unofficial portrait academic poster template inspired by the KTH visual identity.
+- 700 × 1000 mm portrait layout
+- LaTeX Beamerposter
 - Figtree typography
-- Optimized for Overleaf
+
+## Preview
+
+![preview](preview.png)
+
+## Usage
+
+Compile with XeLaTeX.
 
 ## Author
+
 Modified and extended by Jeongin Yoon Blomstervall in May 2026.
 Based on the Gemini beamerposter theme by Anish Athalye.
+Released under the MIT License.
 
 # Gemini Unofficial Oxford Version [![Build Status](https://github.com/anishathalye/gemini/workflows/CI/badge.svg)](https://github.com/anishathalye/gemini/actions?query=workflow%3ACI)
 
